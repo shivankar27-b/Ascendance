@@ -1,0 +1,82 @@
+body{
+    margin:0;
+    padding: 0;
+    background-color: white;
+}
+.line  h1{
+    background: white;
+    font-size: 40px;
+    cursor: pointer;
+    color: #00358B;
+    margin: 50px;
+    font-weight: 550;
+}
+.line{
+   
+    
+    border-left: 4px solid #00358B;
+    height: 50px;
+    }
+.row{
+    margin-bottom: 110px;
+    margin-top: 10px;
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    justify-content: center;
+}
+.card{
+  width: 250px;
+  height: 250px;
+  margin: 20px 10px 10px 10px;
+   
+
+}
+@media screen and (max-width:1024px){
+      .grid{
+          width: 33%;
+      }
+      .card{
+          width: 33%;
+      }
+      .line  h1{
+        background: white;
+        font-size: 40px;
+        cursor: pointer;
+        color: #00358B;
+        margin: 50px;
+        font-weight: 550;
+    }
+    .line{
+       
+        
+        border-left: 4px solid #00358B;
+        height: 50px;
+        }
+}
+@media screen and (max-width:768px){
+    .grid{
+        width: 33%;
+    }
+    .card{
+        width: 33%;
+    }
+    .line  h1{
+        background: white;
+        font-size: 40px;
+        cursor: pointer;
+        color: #00358B;
+        margin: 50px;
+        font-weight: 550;
+    }
+    .line{
+       
+        
+        border-left: 4px solid #00358B;
+        height: 50px;
+        }
+}
+
+
