@@ -1,0 +1,225 @@
+body{
+    background: #001f53;
+    font-family: 'Montserrat';
+}
+.vl {
+  display: block;
+  border-left: 3px solid white;
+  height: 70px;
+  border-radius: 3px;
+}
+h1{
+    color: #fff;
+    white-space: pre;
+    text-align: left;
+    margin-top: 8%;
+    letter-spacing: 2px;
+}
+span{
+    color: #fff;
+}
+.wrapper{
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+    height: 240px;
+}
+.line-area{
+    display:block;
+    width: 70%;
+    height: 1px;
+    background: #ddd;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+}
+.wrapper .timeline-area{
+    height: 100%;
+}
+.single-item{
+    width: 6%;
+    white-space: nowrap;
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    margin-right: 90px;
+    margin-top: 14px;
+    transition: width .5s;
+    z-index: 1;
+}
+.line1{
+    width: 6%;
+    white-space: nowrap;
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    margin-right: 90px;
+    z-index: 1;
+}
+.line2{
+    width: 6%;
+    white-space: nowrap;
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    margin-right: 90px;
+    z-index: 1;
+}
+.single-item > span{
+    display: block;
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    margin-left: -128px;
+    width: 400%;
+}
+.line1::before{
+    content: '';
+    display: block;
+    width: 1px;
+    height: 20px;
+    background: #ddd;
+    margin-right: 40px;
+    margin-top: -20px;
+    margin-left: -15px;
+}
+.single-item > span:before{
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: linear-gradient(#87aedc,#e1cde3);
+    margin: -2px auto 20px auto;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.single-item2{
+    width: 6%;
+    white-space: nowrap;
+    display: inline-block;
+    position:relative;
+    height: 100%;
+    margin-right: 90px;
+    transition: width .5s;
+    z-index: 1;
+}
+.single-item2 > span{
+    display:block;
+    position:absolute;
+    top: 50%;
+    margin-top: -60px;
+    margin-left: -128px;
+    width: 400%;
+}
+.line2::after{
+    content: '';
+    display: block;
+    width: 1px;
+    height: 25px;
+    background: #ddd;
+    margin-right: 40px;
+    margin-top: -57px;
+    margin-left: -15px;
+}
+.single-item2 > span:after{
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: linear-gradient(#87aedc,#e1cde3);
+    margin: 22px auto 20px auto;
+    border-radius: 50%;
+    cursor:pointer;
+}
+.single-item2:hover span:after{
+    transform: scale(1.5);
+}
+.single-item:hover span:before{
+    transform: scale(1.5);
+}
+.single-item::before,
+.single-item::after {
+  --scale: 0;
+  --arrow-size: 10px;
+  --tooltip-color: #333;
+
+  position: absolute;
+  top: -30px;
+  left: -23%;
+  transform: translateX(-50%) translateY(var(--translate-y, 0)) scale(var(--scale));
+  transition: 150ms transform;
+  transform-origin: bottom center;
+}
+
+.single-item::before {
+  --translate-y: calc(-100% - var(--arrow-size));
+
+  content: attr(data-tooltip);
+  color: white;
+  padding: .5rem;
+  border-radius: .3rem;
+  text-align: center;
+  width: max-content;
+  max-width: 300%;
+  background: var(--tooltip-color);
+}
+
+.single-item:hover::before,
+.single-item:hover::after {
+  --scale: 1;
+}
+
+.single-item::after {
+  --translate-y: calc(-1 * var(--arrow-size));
+
+  content: '';
+  border: var(--arrow-size) solid transparent;
+  top: -30px;
+  left: -15px;
+  border-top-color: var(--tooltip-color);
+  transform-origin: top center;
+}
+.single-item2::after,
+.single-item2::before {
+  --scale: 0;
+  --arrow-size: 10px;
+  --tooltip-color: #333;
+
+  position: absolute;
+  top: 55px;
+  left: -23%;
+  transform: translateX(-50%) translateY(var(--translate-y, 0)) scale(var(--scale));
+  transition: 150ms transform;
+  transform-origin: top center;
+}
+
+.single-item2::after {
+  --translate-y: calc(-100% - var(--arrow-size));
+
+  content: attr(data-tooltip);
+  color: white;
+  padding: .5rem;
+  border-radius: .3rem;
+  text-align: center;
+  width: max-content;
+  max-width: 400%;
+  background: var(--tooltip-color);
+}
+
+.single-item2:hover::after,
+.single-item2:hover::before {
+  --scale: 1;
+}
+
+.single-item2::before {
+  --translate-y: calc(-1 * var(--arrow-size));
+
+  content: '';
+  border: var(--arrow-size) solid transparent;
+  top: 0px;
+  left: -15px;
+  border-bottom-color: var(--tooltip-color);
+  transform-origin: top center;
+}
