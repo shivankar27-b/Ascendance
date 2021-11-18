@@ -1,9 +1,11 @@
 body{
     background: #001f53;
     font-family: 'Montserrat';
+    font-size: medium;
+    min-width: 1250px;
 }
 .vl {
-  display: block;
+  display: inline-block;
   border-left: 3px solid white;
   height: 70px;
   border-radius: 3px;
@@ -13,7 +15,7 @@ h1{
     white-space: pre;
     text-align: left;
     margin-top: 8%;
-    letter-spacing: 2px;
+    letter-spacing: 2%;
 }
 span{
     color: #fff;
@@ -44,9 +46,9 @@ span{
     display: inline-block;
     position: relative;
     height: 100%;
-    margin-right: 90px;
-    margin-top: 14px;
-    transition: width .5s;
+    margin-right: 10%;
+    margin-top: 1.5%;
+    transition: width .3s;
     z-index: 1;
 }
 .line1{
@@ -55,7 +57,7 @@ span{
     display: inline-block;
     position: relative;
     height: 100%;
-    margin-right: 90px;
+    margin-right: 95%;
     z-index: 1;
 }
 .line2{
@@ -64,34 +66,34 @@ span{
     display: inline-block;
     position: relative;
     height: 100%;
-    margin-right: 90px;
+    margin-right: 95%;
     z-index: 1;
 }
 .single-item > span{
     display: block;
     position: absolute;
     top: 50%;
-    margin-top: -20px;
-    margin-left: -128px;
+    margin-top: -36%;
+    margin-left: -225%;
     width: 400%;
 }
 .line1::before{
     content: '';
     display: block;
     width: 1px;
-    height: 20px;
+    height: 2000%;
     background: #ddd;
-    margin-right: 40px;
-    margin-top: -20px;
-    margin-left: -15px;
+    margin-right: 20%;
+    margin-top: -580%;
+    margin-left: -440%;
 }
 .single-item > span:before{
     content: '';
     display: block;
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
     background: linear-gradient(#87aedc,#e1cde3);
-    margin: -2px auto 20px auto;
+    margin: -1.5% auto 9% auto;
     border-radius: 50%;
     cursor: pointer;
 }
@@ -101,35 +103,33 @@ span{
     display: inline-block;
     position:relative;
     height: 100%;
-    margin-right: 90px;
-    transition: width .5s;
+    margin-right: 10%;
+    transition: width .3s;
     z-index: 1;
 }
 .single-item2 > span{
-    display:block;
     position:absolute;
-    top: 50%;
-    margin-top: -60px;
-    margin-left: -128px;
+    margin-top: -106%;
+    margin-left: -225%;
     width: 400%;
 }
 .line2::after{
     content: '';
     display: block;
     width: 1px;
-    height: 25px;
+    height: 2000%;
     background: #ddd;
-    margin-right: 40px;
-    margin-top: -57px;
-    margin-left: -15px;
+    margin-right: 40%;
+    margin-top: -1550%;
+    margin-left: -440%;
 }
 .single-item2 > span:after{
     content: '';
     display: block;
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
     background: linear-gradient(#87aedc,#e1cde3);
-    margin: 22px auto 20px auto;
+    margin: 9.5% auto 9% auto;
     border-radius: 50%;
     cursor:pointer;
 }
@@ -143,10 +143,10 @@ span{
 .single-item::after {
   --scale: 0;
   --arrow-size: 10px;
-  --tooltip-color: #333;
+  --tooltip-color:#143162;
 
   position: absolute;
-  top: -30px;
+  top: -7000%;
   left: -23%;
   transform: translateX(-50%) translateY(var(--translate-y, 0)) scale(var(--scale));
   transition: 150ms transform;
@@ -155,14 +155,14 @@ span{
 
 .single-item::before {
   --translate-y: calc(-100% - var(--arrow-size));
-
+  white-space: normal;
   content: attr(data-tooltip);
   color: white;
   padding: .5rem;
   border-radius: .3rem;
   text-align: center;
   width: max-content;
-  max-width: 300%;
+  max-width: 500%;
   background: var(--tooltip-color);
 }
 
@@ -176,35 +176,37 @@ span{
 
   content: '';
   border: var(--arrow-size) solid transparent;
-  top: -30px;
+  top: -70px;
   left: -15px;
   border-top-color: var(--tooltip-color);
   transform-origin: top center;
 }
+
 .single-item2::after,
 .single-item2::before {
   --scale: 0;
   --arrow-size: 10px;
-  --tooltip-color: #333;
-
+  --tooltip-color:#143162; /*#143162*/
+  opacity:1;
   position: absolute;
-  top: 55px;
+  top: 20000%;
   left: -23%;
   transform: translateX(-50%) translateY(var(--translate-y, 0)) scale(var(--scale));
   transition: 150ms transform;
   transform-origin: top center;
 }
 
+
 .single-item2::after {
   --translate-y: calc(-100% - var(--arrow-size));
-
+  white-space: normal;
   content: attr(data-tooltip);
   color: white;
   padding: .5rem;
   border-radius: .3rem;
   text-align: center;
   width: max-content;
-  max-width: 400%;
+  max-width: 500%;
   background: var(--tooltip-color);
 }
 
@@ -218,8 +220,8 @@ span{
 
   content: '';
   border: var(--arrow-size) solid transparent;
-  top: 0px;
+  top: 50px;
   left: -15px;
   border-bottom-color: var(--tooltip-color);
-  transform-origin: top center;
+  transform-origin: bottom center;
 }
